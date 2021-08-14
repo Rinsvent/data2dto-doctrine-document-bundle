@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autoconfigure: true
+    public: false
+    autowire: true
+
+  Rinsvent\Data2DTODoctrineDocumentBundle\Service\:
+    resource: '../../../src/Service'
+
+  _instanceof:
+    Rinsvent\Data2DTOBundle\Service\AbstractTransformer:
+      tags: [ 'rinsvent.transformer' ]
