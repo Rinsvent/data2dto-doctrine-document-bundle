@@ -1,5 +1,5 @@
 {
-    "name": "rinsvent/data2dto-doctrine-docuemnt-bundle",
+    "name": "rinsvent/data2dto-doctrine-document-bundle",
     "description": "Doctrine entity bridge for data2dto bundle",
     "license": "MIT",
     "require": {
