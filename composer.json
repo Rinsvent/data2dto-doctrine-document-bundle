@@ -3,15 +3,15 @@
     "description": "Doctrine entity bridge for data2dto bundle",
     "license": "MIT",
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "ext-json": "*",
         "rinsvent/data2dto": "^0.0",
         "rinsvent/data2dto-bundle": "^0.0",
-        "symfony/http-kernel": "^5.3",
-        "symfony/config": "^5.3",
-        "symfony/dependency-injection": "^5.3",
+        "symfony/http-kernel": "^5.4",
+        "symfony/config": "^5.4",
+        "symfony/dependency-injection": "^5.4",
         "doctrine/mongodb-odm": "^2"
     },
     "require-dev": {
