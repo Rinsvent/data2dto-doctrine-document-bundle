@@ -12,7 +12,7 @@
         "symfony/config": "^5.4",
         "symfony/dependency-injection": "^5.4",
         "doctrine/mongodb-odm": "^2",
-        "rinsvent/transformer-bundle": "^0.0.1"
+        "rinsvent/transformer-bundle": "^0.0"
     },
     "require-dev": {
         "codeception/codeception": "^4.1",
