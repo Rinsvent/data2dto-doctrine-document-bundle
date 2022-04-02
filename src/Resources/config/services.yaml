@@ -8,5 +8,5 @@ services:
     resource: '../../../src/Service'
 
   _instanceof:
-    Rinsvent\Data2DTOBundle\Service\AbstractTransformer:
+    Rinsvent\TransformerBundle\Service\AbstractTransformer:
       tags: [ 'rinsvent.transformer.transformer' ]
