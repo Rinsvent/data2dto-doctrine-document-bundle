@@ -3,28 +3,27 @@
 namespace Rinsvent\Data2DTODoctrineDocumentBundle\Service;
 
 use Doctrine\ODM\MongoDB\DocumentManager;
-use Rinsvent\Data2DTO\Transformer\Meta;
-use Rinsvent\Data2DTOBundle\Service\AbstractTransformer;
+use Rinsvent\Transformer\Transformer\Meta;
+use Rinsvent\TransformerBundle\Service\AbstractTransformer;
 
 class DocumentTransformer extends AbstractTransformer
 {
     public function __construct(
         protected DocumentManager $dm
-    ) {}
+    ) {
+    }
 
     /**
      * @param $data
      * @param Document $meta
      */
-    public function transform(&$data, Meta $meta): void
+    public function transform(mixed $data, Meta $meta): mixed
     {
-        if ($meta->primaryType === 'id' && !is_int($data)) {
-            return;
-        }
-        if ($meta->primaryType === 'uuid' && !is_string($data)) {
-            return;
-        }
         $repository = $this->dm->getRepository($meta->class);
-        $data = $repository->find($data);
+        try {
+            return $repository->find($data);
+        } catch (\Throwable) {
+            return $data;
+        }
     }
 }

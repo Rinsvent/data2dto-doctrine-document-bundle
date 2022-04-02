@@ -2,7 +2,7 @@
 
 namespace Rinsvent\Data2DTODoctrineDocumentBundle\Service;
 
-use Rinsvent\Data2DTO\Transformer\Meta;
+use Rinsvent\Transformer\Transformer\Meta;
 
 #[\Attribute]
 class Document extends Meta
@@ -11,6 +11,8 @@ class Document extends Meta
 
     public function __construct(
         public string $class,
-        public string $primaryType = 'id',
-    ) {}
+        public array $tags = ['default'],
+    ) {
+        parent::__construct($tags);
+    }
 }

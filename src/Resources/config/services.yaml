@@ -9,4 +9,4 @@ services:
 
   _instanceof:
     Rinsvent\Data2DTOBundle\Service\AbstractTransformer:
-      tags: [ 'rinsvent.transformer' ]
+      tags: [ 'rinsvent.transformer.transformer' ]
